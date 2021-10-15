@@ -16,7 +16,6 @@ const Modal = (props) => {
   // para acceder al state en el store (useSelector), para conocer el estado del modal
   const isOpenModal = useSelector( state => state.modals.stateModal);
   
-  console.log(isOpenModal); //false
   return (
     <ModalBs
       show={isOpenModal}
