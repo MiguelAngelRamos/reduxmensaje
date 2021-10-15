@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import Menu from './components/Menu';
 import Modal from './components/Modal';
 import FormMensaje from './components/FormMensaje';
+import ListMensaje from './components/ListMensaje';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Menu />
       <Container className="mt-5">
         <h1 className="text-center">Mensajes</h1>
+        <ListMensaje />
       </Container>
 
       <Modal>

@@ -64,6 +64,8 @@ const FormMensaje = () => {
         mensaje,
         date: moment()
       })
+
+      closeModal(false)
     }
   }
 
@@ -91,6 +93,11 @@ const FormMensaje = () => {
       </Form.Group>
 
       <Button variant="primary" type="submit" size="lg">Enviar Mensaje</Button>
+      {errorFormValue && (
+        <Alert variant="danger" className="mt-4">
+          Todos los campos son obligatorios
+        </Alert>
+      )}
     </Form>
   )
 }

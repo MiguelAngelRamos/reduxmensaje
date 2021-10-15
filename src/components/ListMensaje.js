@@ -1,10 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
+import Mensaje from './Mensaje';
 
 const ListMensaje = () => {
+  const mensajes = useSelector(state => state.mensajes.mensajes)
   return (
-    <div>
-      <h1>lista mensajes</h1>
-    </div>
+    mensajes.map(mensaje => (<Mensaje key={mensaje.id} mensaje={mensaje} />))
   )
 }
 
