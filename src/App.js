@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+// bootstrap
+import { Container } from 'react-bootstrap';
+// redux
+import store from './store';
+import { Provider } from 'react-redux';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <Container className="mt-5">
+        <h1 className="text-center">Mensajes</h1>
+      </Container>
+    </Provider>
+  )
 }
 
-export default App;
+export default App

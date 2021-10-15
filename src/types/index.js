@@ -1,0 +1,2 @@
+// Modal
+export const MOSTRAR_MODAL_MENSAJE = 'MOSTRAR_MODAL_MENSAJE';
