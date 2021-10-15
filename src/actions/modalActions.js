@@ -1,8 +1,8 @@
-import { MOSTRAR_MODAL_MENSAJE } from "../types";
+import { MOSTRAR_OCULTAR_MODAL_MENSAJE } from "../types";
 
 export const openCloseModalAction = (state) => {
   return {
-    type: MOSTRAR_MODAL_MENSAJE,
-    payload: state
+    type: MOSTRAR_OCULTAR_MODAL_MENSAJE,
+    payload: state 
   }
 }

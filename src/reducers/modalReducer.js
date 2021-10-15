@@ -1,4 +1,4 @@
-import { MOSTRAR_MODAL_MENSAJE } from "../types";
+import { MOSTRAR_OCULTAR_MODAL_MENSAJE } from "../types";
 
 const initialState = {
   stateModal: false
@@ -7,7 +7,7 @@ const initialState = {
 
 export default function modalReducer(state=initialState, action) {
   switch(action.type) {
-    case MOSTRAR_MODAL_MENSAJE: {
+    case MOSTRAR_OCULTAR_MODAL_MENSAJE: {
       return {
         ...state,
         stateModal: action.payload

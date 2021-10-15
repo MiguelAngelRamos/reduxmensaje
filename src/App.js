@@ -4,12 +4,23 @@ import { Container } from 'react-bootstrap';
 // redux
 import store from './store';
 import { Provider } from 'react-redux';
+// Componentes propios
+import Menu from './components/Menu';
+import Modal from './components/Modal';
+import FormMensaje from './components/FormMensaje';
+
 const App = () => {
   return (
     <Provider store={store}>
+      <Menu />
       <Container className="mt-5">
         <h1 className="text-center">Mensajes</h1>
       </Container>
+
+      <Modal>
+        <FormMensaje />
+      </Modal>
+ 
     </Provider>
   )
 }

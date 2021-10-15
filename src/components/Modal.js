@@ -1,10 +1,31 @@
 import React from 'react'
+import { Modal as ModalBs} from 'react-bootstrap';
+// redux
+import { useDispatch, useSelector } from 'react-redux';
+import { openCloseModalAction } from '../actions/modalActions';
 
-const Modal = () => {
+const Modal = (props) => {
+  const { children } = props;
+
+  const dispatch = useDispatch();
+
+  const closeModal = (state) => {
+    // llamar la accion
+    dispatch(openCloseModalAction(state))
+  }
+  // para acceder al state en el store (useSelector), para conocer el estado del modal
+  const isOpenModal = useSelector( state => state.modals.stateModal);
+  
+  console.log(isOpenModal); //false
   return (
-    <div>
-      <h1>Modal</h1>
-    </div>
+    <ModalBs
+      show={isOpenModal}
+      size="lg"
+      centered
+      onHide={ ()=> closeModal(false)}
+    >
+      { children }
+    </ModalBs>
   )
 }
 
